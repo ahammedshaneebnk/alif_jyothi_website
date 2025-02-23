@@ -1,0 +1,73 @@
+:root {
+    --primary-color: #444; /* Darker, but softer text */
+    --secondary-color: #777; /* Softer gray */
+    --background-color: #f2f2f2; /* Off-white background */
+    --container-background: #ffffff; /* White container */
+}
+
+body {
+    font-family: 'Roboto', sans-serif;
+    background-color: var(--background-color);
+    color: var(--primary-color);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    min-height: 100vh;
+    margin: 0;
+    line-height: 1.6; /* Improved line height for readability */
+}
+
+.container {
+    text-align: center;
+    background-color: var(--container-background);
+    padding: 60px; /* Increased padding */
+    border-radius: 12px;
+    box-shadow: 0 0 20px rgba(0, 0, 0, 0.15); /* More pronounced shadow */
+    max-width: 600px; /* Limit container width for larger screens */
+    width: 90%; /* Responsive width */
+    box-sizing: border-box; /* Include padding in width calculation */
+}
+
+h1 {
+    font-family: 'Playfair Display', serif;
+    font-size: 3.5em; /* Larger heading */
+    font-weight: 700;
+    margin-bottom: 20px;
+}
+
+p {
+    font-size: 1.8em;
+    font-weight: 300;
+    color: var(--secondary-color);
+}
+
+/* Responsive adjustments */
+@media (max-width: 768px) {
+    .container {
+        padding: 40px;
+    }
+
+    h1 {
+        font-size: 2.8em;
+    }
+
+    p {
+        font-size: 1.5em;
+    }
+}
+
+/* Optional: Subtle animation (more refined) */
+.container {
+    animation: fadeInUp 1s ease-in-out;
+}
+
+@keyframes fadeInUp {
+    from {
+        opacity: 0;
+        transform: translateY(20px);
+    }
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
